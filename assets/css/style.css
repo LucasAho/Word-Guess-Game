@@ -1,0 +1,27 @@
+body {
+    background-color: skyblue;
+}
+.header {
+    
+    background-color: red;
+    margin-top: 20px;
+    padding: 20px;
+    margin-right: 35%;
+    margin-left: 35%;
+
+    
+}
+
+/*Page heading typography*/
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: pink;
+    font-family: 'Press Start 2P', cursive;
+}
+h2 {
+    font-size: 30px;
+    color: pink;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
