@@ -1,6 +1,9 @@
 body {
     background-color: skyblue;
+    font-family: 'Press Start 2P', cursive;  
 }
+
+/*Container for page heading*/
 .header {
     
     background-color: red;
@@ -11,17 +14,27 @@ body {
 
     
 }
+/*Container for wins, instructions, and other player info*/
+.playerStats {
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 40%;        
+    text-align: center;
+}
 
-/*Page heading typography*/
+/*Page typography*/
 h1 {
     font-size: 50px;
     text-align: center;
     color: pink;
-    font-family: 'Press Start 2P', cursive;
 }
 h2 {
     font-size: 30px;
     color: pink;
-    font-family: 'Press Start 2P', cursive;
     text-align: center;
+}
+p {
+    font-size: 20px; 
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.795);
 }
