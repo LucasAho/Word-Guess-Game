@@ -20,6 +20,7 @@ body {
     margin-top: 20px;
     margin-left: 40%;        
     text-align: center;
+    
 }
 
 /*Page typography*/
@@ -33,8 +34,10 @@ h2 {
     color: pink;
     text-align: center;
 }
-p {
+.statSection {
     font-size: 20px; 
     margin-bottom: 15px;
     color: rgba(255, 255, 255, 0.795);
+    padding-top: 10px;
 }
+

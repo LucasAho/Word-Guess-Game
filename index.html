@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Word Guess Game</title>
         <!--Javascript Link-->
-        <script type="text/javascript" src="assets\javascript\game.js"></script>
+        
         <link rel="stylesheet" type="text/css" href="assets\css\reset.css">
         <link rel="stylesheet" type="text/css" href="assets\css\style.css">
         <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -19,11 +19,14 @@
         <!--Container and text for player stats-->
         <div class= "playerStats">
             <!--Make press to start blink until started-->
-            <p class= "startText">Press Any Key to Start</p>
-            <p class= "winCount">Wins:</p>
-            <p class= "underscore">Current Word:</p>
-            <p class= "guessCount">Number of Guesses Remaining:</p>
-            <p class= "guessLetter">Letters Guessed:</p>
+            <div class= "statSection">Press Any Key to Start</div>
+            <div class= "statSection">Wins: <span id= "winCount-text"></span></div>
+            <div class= "statSection">Current Word: <span id= "underscore-text"></span></div>
+            <div class= "statSection">Remaining Guesses: <span id= "guessCount-text"></span></div>
+            <div class= "statSection">Incorrect Guesses: <span id= "guessWrong-text"></span></div>
         </div>
+        
+        <!--Link to javascript-->
+        <script type="text/javascript" src="assets\javascript\game.js"></script>
     </body>
 </html>
