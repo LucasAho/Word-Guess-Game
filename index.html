@@ -1,32 +1,55 @@
 <!DOCTYPE html>
+
 <html lang= 'en'>
+    
     <head>
+
         <meta charset="UTF-8">
         <title>Word Guess Game</title>
-        <!--Javascript Link-->
-        
-        <link rel="stylesheet" type="text/css" href="assets\css\reset.css">
-        <link rel="stylesheet" type="text/css" href="assets\css\style.css">
+
+        <!--Font Links-->
         <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+        <!--Bootstrap/CSS link-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets\css\style.css">
+        
+        <!--Jquery-->
+        <script type="text/javascript" src=https://code.jquery.com/jquery-3.3.1.min.js></script>
         
     </head>
+
     <body>
-        <!--Container and text for page header-->
-        <div class= "header">
-            <h1>Hangman</h1>
-            <h2>Video Games</h2>
-        </div>
-        <!--Container and text for player stats-->
-        <div class= "playerStats">
-            <!--Make press to start blink until started-->
-            <div class= "statSection">Press Any Key to Start</div>
-            <div class= "statSection">Wins: <span id= "win-text"></span></div>
-            <div class= "statSection">Current Word: <span id= "underscore-text"></span></div>
-            <div class= "statSection">Remaining Guesses: <span id= "guess-text"></span></div>
-            <div class= "statSection">Incorrect Guesses: <span id= "wrong-text"></span></div>
-        </div>
-        
-        <!--Link to javascript-->
-        <script type="text/javascript" src="assets\javascript\game.js"></script>
+
+        <!--Site Container-->
+        <div class= "container">
+
+            <!--Header Block-->
+            <div class= "row mr-n5 my-4 py-2" id="header">
+                <div class="col-12 py-1">
+                    <h1>Hangman</h1>
+                </div>
+                <div class="col-12 py-1">
+                    <h2>Video Game Themed</h2>
+                </div>
+            </div>
+            <!--Header Block-->
+
+            <!--Container and text for player stats-->
+            <div class= "playerStats">
+                <!--Make press to start blink until started-->
+                <div class= "statSection">Press Any Key to Start</div>
+                <div class= "statSection">Wins: <span id= "win-text"></span></div>
+                <div class= "statSection">Current Word: <span id= "underscore-text"></span></div>
+                <div class= "statSection">Remaining Guesses: <span id= "guess-text"></span></div>
+                <div class= "statSection">Incorrect Guesses: <span id= "wrong-text"></span></div>
+            </div>
+            <!--Container and text for player stats-->
+            
+        </div>   
+        <!--Site Container-->
+
     </body>
+    <!--JS Reference-->
+    <script type="text/javascript" src="assets\javascript\game.js"></script>
 </html>

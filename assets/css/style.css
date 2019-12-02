@@ -4,15 +4,9 @@ body {
 }
 
 /*Container for page heading*/
-.header {
-    
-    background-color: red;
-    margin-top: 20px;
-    padding: 20px;
-    margin-right: 35%;
-    margin-left: 35%;
-
-    
+#header {
+    justify-content: center;
+    background-color: red;    
 }
 /*Container for wins, instructions, and other player info*/
 .playerStats {

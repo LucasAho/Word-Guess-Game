@@ -10,7 +10,7 @@ var guessText = document.getElementById('guess-text');
 var wrongText = document.getElementById('wrong-text');
 
 //Array of video game titles
-var wordOptions = ["mario","doom","overwatch","tetris","minecraft","pacman","halo"];
+var wordOptions = ["mario","doom","overwatch","tetris","minecraft","pacman","halo","skyrim","donkey kong","sims"];
 
 
 
@@ -22,18 +22,27 @@ var winText = document.getElementById('win-text');
 
 //Player starts game by pressing key
 document.onkeyup = function(){
-    
+    var firstWord = "";
+    var secondWord = "";
     //Initializing game 
     //Randomly choose word element
-    var wordPicker = function() {
-        var random = wordOptions[Math.floor(Math.random() * wordOptions.length)];
-        return(random);
+    var wordPicker = function(first,second) {
+        if (second === undefined) {
+            firstWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
+            return 
+        }
+        if(second) {
+            secondWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
+        return(first,second);
+        }
     }
-    var playerWord = wordPicker();
+    
+    //First game word
+    var playerWord = wordPicker(2);
+    console.log(playerWord);
+    
+    
 
-    
-    
-    
     
     //Create underscores based on playerWord length
     var lengthDisplay = [];
@@ -53,7 +62,9 @@ document.onkeyup = function(){
         var playerGuessCode = event.keyCode;
         
         //Checking if player input is a letter 
-        if (playerGuessCode > 64 && playerGuessCode < 91) {
+        if (playerGuessCode > 64 && playerGuessCode < 91 && wins === 0) {
+            
+           
             
             //Game winning function returns boolean
             var winCheck = function(a){
@@ -62,8 +73,9 @@ document.onkeyup = function(){
             function newGame(){
                 alert("You won!");
                 wins++;
-                playerWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];;
-                for (var i = 0; i < playerWord.length; i++) {
+                $("underscore-text").empty();
+                playerWord1 = wordOptions[Math.floor(Math.random() * wordOptions.length)];;
+                for (var i = 0; i < wordPicker(second).length; i++) {
                     lengthDisplay[i] = "_";
                 }
                 var underscoreWrite = document.getElementById('underscore-text');
@@ -95,7 +107,7 @@ document.onkeyup = function(){
                     livesCount--;
                     badPool.push(playerGuess);
                 }
-                //Resets page and informs player they l
+                //Resets page and informs player they lost
                 if (livesCount === 0) {
                     alert("Whoops! Try again!");
                     document.location.reload();
